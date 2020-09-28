@@ -1,0 +1,103 @@
+.aside-admin {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    z-index: 100;
+    height: 100%;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+}
+#label-small {
+    display: none;
+}
+.toggler-nav-small {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    top: 25px;
+    border-radius: 40px;
+    border: 2px solid #ffd720;
+    z-index: 100;
+    background-color: rgb(250, 250, 250, 0) !important;
+    animation-name: toggle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.toggler-nav-small:nth-child(1) {
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes toggle {
+    0% {transform: scale(1); opacity: 1;}
+    100% {transform: scale(2); opacity: 0;}
+}
+@media screen and (max-width: 767px) {
+    .aside-admin {
+        left: -90px;
+    }
+    .toggler-nav-small {
+        display: inline-block;
+    }
+    #label-small {
+        display: inline-block;
+    }
+}
+
+.menu-aside div {
+    padding: 5px;
+    color: rgb(158, 158, 158);
+    transition: all .3s;
+}
+.menu-aside div:hover {
+    padding: 5px;
+    color: rgb(158, 158, 158);
+    background-color: #ffefa8;
+    color: rgb(44, 44, 44) !important;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all .3s;
+}
+.overlay-black-admin {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-aside div.menu-active {
+    background-color: #ffefa8;
+    border-radius: 10px;
+    padding-top: 10px;
+    color: rgb(44, 44, 44) !important;
+    padding-bottom: 10px;
+}
+
+.exit-menu {
+    position: absolute;
+    bottom: 30px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    left: 15%;
+    width: 70%;
+    transition: all .3s;
+}
+.exit-menu:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(230, 230, 230);
+}
+
+.label-menu {
+    font-family: poppins;
+    margin-bottom: 0px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 1rem;
+}
+.img-logo-aside {
+    position: relative;
+}
+.top-img {
+    top: -10px;
+}
